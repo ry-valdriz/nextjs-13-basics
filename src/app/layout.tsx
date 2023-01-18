@@ -1,4 +1,5 @@
-import './globals.css'
+import Link from 'next/link';
+import './globals.css';
 
 export default function RootLayout({
   children,
@@ -12,7 +13,15 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <main>
+          <nav className="header-nav-container">
+            <Link className="header-nav" href="/">Home</Link>
+            <Link className="header-nav" href="/notes">Notes</Link>
+          </nav>
+        </main>
+        {children}
+      </body>
     </html>
   )
 }

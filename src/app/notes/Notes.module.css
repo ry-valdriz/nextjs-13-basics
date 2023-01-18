@@ -1,0 +1,24 @@
+.notes-card {
+    padding: 5px;
+    color: #DEE0E2;
+    margin: 5px;
+    width: auto;
+    height: auto;
+    background-color: #6C757D;
+    border: 1px solid #6C757D;
+}
+
+.notes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

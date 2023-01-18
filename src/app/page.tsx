@@ -1,16 +1,12 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from 'next/image';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      {/* <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          Header Section
         </p>
         <div>
           <a
@@ -29,10 +25,10 @@ export default function Home() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.center}>
-        <Image
+        {/* <Image
           className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
@@ -42,34 +38,35 @@ export default function Home() {
         />
         <div className={styles.thirteen}>
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+        </div> */}
+        Notes Container
       </div>
 
       <div className={styles.grid}>
         <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          // href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
+          <h2>
+            Button or text field <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas molestie augue id varius. Maecenas facilisis eros elit, et tincidunt.
           </p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          // href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
+          <h2 >
+            Button or text field <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas molestie augue id varius. Maecenas facilisis eros elit, et tincidunt.</p>
         </a>
 
         <a
@@ -78,10 +75,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
+          <h2>
             Deploy <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>
+          <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
