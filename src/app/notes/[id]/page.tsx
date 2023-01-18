@@ -1,4 +1,4 @@
-import styles from "./note_with_id.module.css";
+import styles from "../Notes.module.css";
 
 async function getNote(noteID: string) {
     const res = await fetch(
@@ -14,12 +14,14 @@ async function getNote(noteID: string) {
 export default async function NotePage({ params }: any) {
     const { id, title, content, created } = await getNote(params.id);
     return (
-        <div className={styles["note-card"]} >
-            <h1>notes</h1>
-            <div>
-                <h3>{title}</h3>
-                <h5>{content}</h5>
-                <p>{created}</p>
+        <div className={styles["page-container"]}>
+            <div className={styles["notes-card"]} >
+                <h1>notes</h1>
+                <div>
+                    <h3>{title}</h3>
+                    <h5>{content}</h5>
+                    <p>{created}</p>
+                </div>
             </div>
         </div>
     )
