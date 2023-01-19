@@ -1,7 +1,7 @@
 .notes-card {
     padding: 15px;
     color: #DEE0E2;
-    margin: 5px;
+    margin: 15px;
     width: auto;
     height: auto;
     background-color: #6C757D;
@@ -26,7 +26,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 70%;
+    /* overflow-wrap: break-word; */
+}
+
+.create-note-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.create-note-container div {
+    margin: 15px 0 15px 0;
 }
 
 .page-container {
@@ -34,7 +48,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
 
 .page-title {

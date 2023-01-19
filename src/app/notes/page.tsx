@@ -1,21 +1,25 @@
 import Link from "next/link";
 import styles from './Notes.module.css';
+import CreateNote from "./CreateNote";
 import PocketBase from 'pocketbase';
 
-// export const dynamic = 'auto',
-//     dynamicParams = true,
-//     revalidate = 0,
-//     fetchCache = 'auto',
-//     runtime = 'nodejs',
-//     preferredRegion = 'auto'
+
+export const dynamic = 'auto',
+    dynamicParams = true,
+    revalidate = 1,
+    fetchCache = 'force-no-store',
+    runtime = 'nodejs',
+    preferredRegion = 'auto'
 
 const getNotes = async () => {
     console.log("getting notes. . .")
     try {
-        const res = await fetch('http://127.0.0.1:8090/api/collections/notes/records?page=1&perPage=30', { cache: 'no-store' });
-        const data = await res.json();
-        // const db = new PocketBase('http://127.0.0.1:8090');
-        // const data = await db.collection('notes').getList(1, 10);
+        // const res = await fetch('http://127.0.0.1:8090/api/collections/notes/records?page=1&perPage=30', { cache: 'no-store' });
+        // const data = await res.json();
+        const db = new PocketBase('http://127.0.0.1:8090');
+        const data = await db.collection('notes').getList(1, 50);
+        const listData = await db.collection('notes').getFullList(100, { sort: '-created' });
+        console.log({ listData });
         console.log("notes data: ", data);
         return data?.items as any[];
     } catch (error) {
@@ -52,6 +56,7 @@ export default async function NotesPage() {
                     })
                 }
             </div>
+            <CreateNote />
         </div>
     )
 }
