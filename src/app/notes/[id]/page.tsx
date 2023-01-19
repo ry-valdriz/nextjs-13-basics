@@ -15,14 +15,14 @@ export default async function NotePage({ params }: any) {
     const { id, title, content, created } = await getNote(params.id);
     return (
         <div className={styles["page-container"]}>
-            <div className={styles["notes-card"]} >
-                <h1>notes</h1>
+            <h1 className={styles["page-title"]}>notes</h1>
+            <div className={styles["notes-card"]}>
                 <div>
-                    <h3>{title}</h3>
-                    <h5>{content}</h5>
-                    <p>{created}</p>
+                    <h2 className={styles["card-title"]}>{title}</h2>
+                    <p className={styles["card-content"]}>{content}</p>
+                    <p className={styles["card-create-date"]}>{created}</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
