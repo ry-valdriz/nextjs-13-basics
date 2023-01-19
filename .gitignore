@@ -1,3 +1,6 @@
 node_modules
 .next
 .vscode
+pocketbase_0.11.2_darwin_arm64/*
+pocketbase_0.11.2_darwin_arm64/pb_data
+pocketbase_0.11.2_darwin_arm64/pb_migration
